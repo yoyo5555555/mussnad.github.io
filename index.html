@@ -42,7 +42,7 @@
             padding: 10px;
             box-sizing: border-box;
             resize: none;
-            font-size: 45px;
+            font-size: 16px;
         }
         textarea[readonly] {
             background-color: #e9e9e9;
@@ -69,14 +69,13 @@
             <textarea id="inputText" placeholder="اكتب هنا..." oninput="updateOutput()"></textarea>
         </div>
         <div class="translation-box" id="outputContainer">
-            <textarea id="outputText" placeholder="" readonly></textarea>
+            <textarea id="outputText" placeholder="الترجمة تظهر هنا..." readonly></textarea>
         </div>
         <button id="captureButton">التقاط صورة</button>
     </div>
     <script>
         const charMap = {
-         
-  ا: "𐩱",
+ ا: "𐩱",
   ب: "𐩨",
   ت: "𐩩",
   ث: "𐩻",
@@ -106,10 +105,8 @@
   ي: "𐩺",
 
 
+            
         };
-
-
-
 
         function updateOutput() {
             const inputText = document.getElementById('inputText').value;
@@ -126,16 +123,6 @@
         function containsNonArabic(text) {
             const arabicRegex = /^[\u0600-\u06FF\s]*$/;
             return !arabicRegex.test(text);
-        }
-
-
-
-
-        
-        function updateOutput() {
-            const inputText = document.getElementById('inputText').value;
-            const outputText = document.getElementById('outputText');
-            outputText.value = transformText(inputText);
         }
 
         function transformText(text) {
@@ -157,3 +144,4 @@
     </script>
 </body>
 </html>
+
