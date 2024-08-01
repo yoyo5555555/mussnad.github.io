@@ -17,11 +17,12 @@
             height: 100vh;
             margin: 0;
             background-color: #f0f0f0;
+            padding: 10px;
         }
         .container {
             display: flex;
             flex-direction: column;
-            width: 80%;
+            width: 100%;
             max-width: 800px;
             align-items: center;
             gap: 10px;
@@ -42,7 +43,7 @@
             padding: 10px;
             box-sizing: border-box;
             resize: none;
-            font-size: 45px;
+            font-size: 24px;
         }
         textarea[readonly] {
             background-color: white;
@@ -61,6 +62,16 @@
         button:hover {
             background-color: #0056b3;
         }
+        @media (max-width: 600px) {
+            textarea {
+                font-size: 18px;
+                height: 100px;
+            }
+            button {
+                font-size: 14px;
+                padding: 8px 16px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -75,37 +86,11 @@
     </div>
     <script>
         const charMap = {
- ا: "𐩱",
-  ب: "𐩨",
-  ت: "𐩩",
-  ث: "𐩻",
-  ج: "𐩴",
-  ح: "𐩢",
-  خ: "𐩭",
-  د: "𐩵",
-  ذ: "𐩹",
-  ر: "𐩧",
-  ز: "𐩸",
-  س: "𐩪",
-  ش: "𐩦",
-  ص: "𐩮",
-  ض: "𐩳",
-  ط: "𐩷",
-  ظ: "𐩼",
-  ع: "𐩲",
-  غ: "𐩶",
-  ف: "𐩰",
-  ق: "𐩤",
-  ك: "𐩫",
-  ل: "𐩡",
-  م: "𐩣",
-  ن: "𐩬",
-  ه: "𐩠",
- و: "𐩥",
-  ي: "𐩺",
-
-
-            
+            'ا': "𐩱", 'ب': "𐩨", 'ت': "𐩩", 'ث': "𐩻", 'ج': "𐩴", 'ح': "𐩢",
+            'خ': "𐩭", 'د': "𐩵", 'ذ': "𐩹", 'ر': "𐩧", 'ز': "𐩸", 'س': "𐩪",
+            'ش': "𐩦", 'ص': "𐩮", 'ض': "𐩳", 'ط': "𐩷", 'ظ': "𐩼", 'ع': "𐩲",
+            'غ': "𐩶", 'ف': "𐩰", 'ق': "𐩤", 'ك': "𐩫", 'ل': "𐩡", 'م': "𐩣",
+            'ن': "𐩬", 'ه': "𐩠", 'و': "𐩥", 'ي': "𐩺",
         };
 
         function updateOutput() {
@@ -144,4 +129,3 @@
     </script>
 </body>
 </html>
-
