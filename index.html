@@ -108,6 +108,30 @@
 
         };
 
+
+
+
+        function updateOutput() {
+            const inputText = document.getElementById('inputText').value;
+            if (containsNonArabic(inputText)) {
+                alert('يرجى إدخال نص باللغة العربية فقط.');
+                document.getElementById('inputText').value = '';
+                document.getElementById('outputText').value = '';
+                return;
+            }
+            const outputText = document.getElementById('outputText');
+            outputText.value = transformText(inputText);
+        }
+
+        function containsNonArabic(text) {
+            const arabicRegex = /^[\u0600-\u06FF\s]*$/;
+            return !arabicRegex.test(text);
+        }
+
+
+
+
+        
         function updateOutput() {
             const inputText = document.getElementById('inputText').value;
             const outputText = document.getElementById('outputText');
